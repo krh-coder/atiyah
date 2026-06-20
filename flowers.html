@@ -1,84 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Happy Birthday</title>
-
-  <style>
-    body {
-      text-align: center;
-      font-family: Arial, sans-serif;
-      background-color: #fff0f5;
-      padding: 30px;
-      overflow-x: hidden;
-    }
-
-    h1 {
-      color: #d63384;
-      font-size: 36px;
-    }
-
-    h2 {
-      color: #8a2be2;
-    }
-
-    video {
-      width: 90%;
-      max-width: 700px;
-      border-radius: 15px;
-      margin-top: 20px;
-    }
-
-    .confetti {
-      position: fixed;
-      top: -10px;
-      width: 10px;
-      height: 10px;
-      background-color: pink;
-      animation: fall 3s linear forwards;
-    }
-
-    @keyframes fall {
-      to {
-        transform: translateY(110vh) rotate(720deg);
-        opacity: 0;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Atiyah</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h1>Happy Birthday Atiyah 🎉</h1>
+    <h1>Happy Birthday Atiyah 🎉</h1>
 
-  <video autoplay muted playsinline controls>
-    <source src="birthday-video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+    <video autoplay muted playsinline controls>
+        <source src="birthday-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-  <h2>May your new age blossom beautifully 🌸</h2>
-  <a href="index.html" class="back-button">🎁 Back to the Gift</a>
-  <script>
-    function createConfetti() {
-      const confetti = document.createElement("div");
-      confetti.classList.add("confetti");
+    <h2>May your new age blossom beautifully 🌸</h2>
 
-      confetti.style.left = Math.random() * 100 + "vw";
-      confetti.style.backgroundColor = ["#ff69b4", "#ffc0cb", "#ffd700", "#ffffff", "#d63384"][Math.floor(Math.random() * 5)];
-      confetti.style.animationDuration = (Math.random() * 2 + 2) + "s";
+    <a href="index.html" class="back-button">
+        🎁 Back to the Gift
+    </a>
 
-      document.body.appendChild(confetti);
+    <script>
+        function createConfetti() {
+            const confetti = document.createElement("div");
+            confetti.classList.add("confetti");
 
-      setTimeout(() => {
-        confetti.remove();
-      }, 4000);
-    }
+            confetti.style.left = Math.random() * 100 + "vw";
 
-    const confettiInterval = setInterval(createConfetti, 80);
+            const colors = [
+                "#ff69b4",
+                "#ffc0cb",
+                "#ffd700",
+                "#ffffff",
+                "#d63384"
+            ];
 
-    setTimeout(() => {
-      clearInterval(confettiInterval);
-    }, 4000);
-  </script>
+            confetti.style.backgroundColor =
+                colors[Math.floor(Math.random() * colors.length)];
+
+            confetti.style.animationDuration =
+                (Math.random() * 2 + 2) + "s";
+
+            document.body.appendChild(confetti);
+
+            setTimeout(() => {
+                confetti.remove();
+            }, 4000);
+        }
+
+        const confettiInterval = setInterval(createConfetti, 80);
+
+        setTimeout(() => {
+            clearInterval(confettiInterval);
+        }, 4000);
+    </script>
 
 </body>
 </html>
