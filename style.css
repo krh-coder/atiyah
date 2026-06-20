@@ -8,26 +8,26 @@ body {
 }
 
 .birthday-banner {
-    background: linear-gradient(135deg, #ff69b4, #ff85c1);
-    color: white;
+    background: linear-gradient(135deg, #ffe4ec, #fff0f7);
+    color: #c2185b;
     padding: 25px;
     margin: 20px auto;
     width: 90%;
     max-width: 900px;
     border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.10);
 }
 
 .birthday-banner h1 {
     margin: 0;
     font-size: clamp(2rem, 5vw, 3rem);
-    color: white;
+    color: #c2185b;
 }
 
 .birthday-banner p {
     margin-top: 10px;
     font-size: clamp(1rem, 3vw, 1.2rem);
-    color: white;
+    color: #ad1457;
 }
 
 .gift-section {
