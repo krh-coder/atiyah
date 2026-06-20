@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+}
+
+.birthday-banner {
+    background: linear-gradient(135deg, #ff69b4, #ff85c1);
+    color: white;
+    padding: 25px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.birthday-banner h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: white;
+}
+
+.birthday-banner p {
+    margin-top: 10px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: white;
+}
+
+.gift-section {
+    margin-top: 45px;
+}
+
+.gift-text {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    color: #d63384;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.gift {
+    width: min(250px, 70vw);
+    cursor: pointer;
+    animation: bounce 0.8s infinite alternate;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #ffb6c1;
+    color: #c2185b;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background-color: #ffc9d6;
+    transform: scale(1.05);
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-25px);
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .birthday-banner {
+        padding: 18px;
+        margin-top: 15px;
+    }
+
+    .gift-section {
+        margin-top: 35px;
+    }
+}
